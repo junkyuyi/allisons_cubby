@@ -6,31 +6,68 @@
 	background-color: yellow;
 }
 /* Game Board base*/
-#gameboard {
-	/* div position */
-	width: 240px;
-	height: 240px;
-	margin: 0px auto;
-	position: relative;
 
-	/* bg image */
-	background-image:	 url("../images/game_tictactoe_base.png");
-	background-size:	 cover;                  
-    background-repeat:   no-repeat;
-    background-position: center center;
-   
+
+
+
+@media screen and (max-width:480px)  { 
+	/* smartphones, iPhone, portrait 480x320 phones */
+	#gameboard {
+		width: 700px;
+		height: 700px;
+
+		margin: 0px auto;
+		position: relative;
+
+		/* bg image */
+		background-image:	 url("../images/game_tictactoe_base.png");
+		background-size:	 cover;                  
+	    background-repeat:   no-repeat;
+	    background-position: center center;  
+	}
 }
 
+@media screen and (min-width:481px)  { 
+	#gameboard {
+		width: 500px;
+		height: 500px;
+		margin: 0px auto;
+		position: relative;
+
+		/* bg image */
+		background-image:	 url("../images/game_tictactoe_base.png");
+		background-size:	 cover;                  
+	    background-repeat:   no-repeat;
+	    background-position: center center;  
+	} 
+}
+
+/*@media (min-width:641px)  { 
+	 portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones  
+}
+
+@media (min-width:961px)  { 
+	 tablet, landscape iPad, lo-res laptops ands desktops  
+}
+
+@media (min-width:1025px) { 
+	 big landscape tablets, laptops, and desktops  
+}
+
+@media (min-width:1281px) { 
+	 hi-res laptops and desktops  
+}*/
+
 /* Individual grids */
-#col-0-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 10px; }
-#col-0-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 10px; }
-#col-0-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 10px; }
-#col-1-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 90px; }
-#col-1-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 90px; }
-#col-1-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 90px; }
-#col-2-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 170px; }
-#col-2-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 170px; }
-#col-2-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 170px; }
+#col-0-row-0 { position: absolute; height: 25%; width: 25%; top: 4%; left: 4%; }
+#col-0-row-1 { position: absolute; height: 25%; width: 25%; top: 38%; left: 4%; }
+#col-0-row-2 { position: absolute; height: 25%; width: 25%; top: 73%; left: 4%; }
+#col-1-row-0 { position: absolute; height: 25%; width: 25%; top: 4%; left: 38%; }
+#col-1-row-1 { position: absolute; height: 25%; width: 25%; top: 38%; left: 38%; }
+#col-1-row-2 { position: absolute; height: 25%; width: 25%; top: 73%; left: 38%; }
+#col-2-row-0 { position: absolute; height: 25%; width: 25%; top: 4%; left: 73%; }
+#col-2-row-1 { position: absolute; height: 25%; width: 25%; top: 38%; left: 73%; }
+#col-2-row-2 { position: absolute; height: 25%; width: 25%; top: 73%; left: 73%; }
 
 /* Shapes */
 .player-1-shape { 
@@ -48,10 +85,10 @@
 
 #gameover {
 	position: absolute;
-	height: 240px;
-	width: 240px;
-	left: 0px;
-	top: 0px;
+	height: 90%;
+	width: 90%;
+	left: 5%;
+	top: 5%;
 
 	background-image:	 url("../images/game_tictactoe_gameover.gif");
 	background-size:	 cover;                  
