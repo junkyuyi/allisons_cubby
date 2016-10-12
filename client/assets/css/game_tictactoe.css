@@ -1,0 +1,80 @@
+#title {
+	text-align: center;
+}
+
+#message {
+	background-color: yellow;
+}
+/* Game Board base*/
+#gameboard {
+	/* div position */
+	width: 240px;
+	height: 240px;
+	margin: 0px auto;
+	position: relative;
+
+	/* bg image */
+	background-image:	 url("../images/game_tictactoe_base.png");
+	background-size:	 cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center;
+   
+}
+
+/* Individual grids */
+#col-0-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 10px; }
+#col-0-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 10px; }
+#col-0-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 10px; }
+#col-1-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 90px; }
+#col-1-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 90px; }
+#col-1-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 90px; }
+#col-2-row-0 { position: absolute; height: 60px; width: 60px; top: 10px; left: 170px; }
+#col-2-row-1 { position: absolute; height: 60px; width: 60px; top: 90px; left: 170px; }
+#col-2-row-2 { position: absolute; height: 60px; width: 60px; top: 170px; left: 170px; }
+
+/* Shapes */
+.player-1-shape { 
+	background-image:	 url("../images/game_tictactoe_o.png");
+	background-size:	 cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+.player-2-shape { 
+	background-image:	 url("../images/game_tictactoe_x.png");
+	background-size:	 cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#gameover {
+	position: absolute;
+	height: 240px;
+	width: 240px;
+	left: 0px;
+	top: 0px;
+
+	background-image:	 url("../images/game_tictactoe_gameover.gif");
+	background-size:	 cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+/* gameover animation */
+#gameover {
+	opacity: 1;
+}
+#gameover.ng-enter {
+  transition:1s linear all;
+  opacity:0;
+}
+#gameover.ng-enter.ng-enter-active {
+  opacity:1;
+}
+#gameover.ng-leave {
+  transition:1s linear all;
+  opacity:1;
+}
+#gameover.ng-leave.ng-leave-active {
+  opacity:0;
+  transform: scale(2) rotate(2160deg);
+}

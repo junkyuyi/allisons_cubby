@@ -1,0 +1,79 @@
+<div class="row">
+	<p class="col-xs-4 col-xs-offset-1">
+		Hello! Please login and share your ideas.
+	</p>
+	<p class="col-xs-4 col-xs-offset-2">
+		If you do not have a login, no problem! Just register here and begin right away.
+	</p>
+</div>
+
+
+<div class="row">
+
+	<!-- Login column -->
+	<div class="col-xs-4 col-xs-offset-1 panel-group">	
+		<div class="panel panel-success">
+			<div class="panel-heading">LOGIN</div>
+			<div class="panel-body">
+				<form name="loginForm">
+					<div class="form-group">
+						<input name="email" class="form-control" type="text" placeholder="Email" ng-model="user.email" required ng-minlength="8" ng-pattern="/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/">
+						<div ng-if="loginForm.email.$touched">
+							<span class="error" ng-if="loginForm.email.$error.required">Email is required!</span>
+							<span class="error" ng-if="loginForm.email.$error.pattern">Invalid email format</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<input name="password" class="form-control" type="password" placeholder="Password" ng-model="user.password">
+						<div ng-if="loginForm.password.$touched">
+							<span class="error" ng-if="loginForm.password.$error.required">Password is required!</span>
+						</div>
+					</div>
+					<button class="btn btn-success" ng-click="login()">Login</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Registration column -->
+	<div class="col-xs-4 col-xs-offset-2 panel-group">	
+		<div class="panel panel-danger">
+			<div class="panel-heading">REGISTER</div>
+			<div class="panel-body">
+				<form name="registerForm">
+					<div class="form-group">
+						<input name="email" class="form-control" type="email" placeholder="text" ng-model="newUser.email" required ng-minlength="8" ng-pattern="/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/">
+						<div ng-if="registerForm.email.$touched">
+							<span class="error" ng-if="registerForm.email.$error.required">Email is required!</span>
+							<span class="error" ng-if="registerForm.email.$error.pattern">Invalid email format</span>
+						</div>
+						
+					</div>
+					<div class="form-group">
+						<input name="name" class="form-control" type="text" placeholder="Name" ng-model="newUser.name" required ng-minlength="2">
+						<div ng-if="registerForm.name.$touched">
+							<span class="error" ng-if="registerForm.name.$error.required">Name is required!</span>
+							<span class="error" ng-if="registerForm.name.$error.minlength">Name should be at least 2 characters.</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<input name="password" class="form-control" type="password" placeholder="Password" ng-model="newUser.password" required ng-minlength="8">
+						<div ng-if="registerForm.password.$touched">
+							<span class="error" ng-if="registerForm.password.$error.required">Password is required!</span>
+							<span class="error" ng-if="registerForm.password.$error.minlength">Password should be at least 8 characters.</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<input name="confirm_password" class="form-control" type="password" placeholder="Confirm Password" ng-model="newUser.confirm_password" required match-password="password">
+						<div ng-if="registerForm.confirm_password.$touched">
+							<span class="error" ng-if="registerForm.confirm_password.$error.required">Confirm Password is required!</span>
+							<span class="error" ng-if="registerForm.confirm_password.$error.passwordMatch">Does not match Password.</span>
+						</div>
+					</div>
+					<button class="btn btn-danger" ng-click="register()" ng-disabled="registerForm.$invalid">Register</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

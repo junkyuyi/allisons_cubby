@@ -1,0 +1,23 @@
+<link rel="stylesheet" type="text/css" href="../assets/css/game_tictactoe.css">
+
+<h1 id="title">Tic Tac Toe</h1>
+
+<div ng-if="turn == 1" id="message" class="alert alert-danger">
+	{{message}}
+</div>
+<div ng-if="turn == 2" id="message" class="alert alert-info">
+	{{message}}
+</div>
+
+<div id="gameboard" class="">
+	<div id="col-0-row-0" ng-click="fillGrid(0,0,$event)"></div>
+	<div id="col-0-row-1" ng-click="fillGrid(0,1,$event)"></div>
+	<div id="col-0-row-2" ng-click="fillGrid(0,2,$event)"></div>
+	<div id="col-1-row-0" ng-click="fillGrid(1,0,$event)"></div>
+	<div id="col-1-row-1" ng-click="fillGrid(1,1,$event)"></div>
+	<div id="col-1-row-2" ng-click="fillGrid(1,2,$event)"></div>
+	<div id="col-2-row-0" ng-click="fillGrid(2,0,$event)"></div>
+	<div id="col-2-row-1" ng-click="fillGrid(2,1,$event)"></div>
+	<div id="col-2-row-2" ng-click="fillGrid(2,2,$event)"></div>
+	<div id="gameover" ng-if="gameOver" ng-click="resetGame()"></div>
+</div>

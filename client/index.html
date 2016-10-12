@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The WALL!!</title>
+
+  <!-- bower components -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap-theme.css">
+  <script type="text/javascript" src='angular/angular.js'></script>
+  <script type="text/javascript" src='angular-animate/angular-animate.js'></script>
+  <script type="text/javascript" src='angular-route/angular-route.js'></script>
+  <script type="text/javascript" src='angular-cookies/angular-cookies.js'></script>
+  <script type="text/javascript" src='angular-password/angular-password.js'></script>
+  
+  <!-- config/routes -->
+  <script type="text/javascript" src='config/route.js'></script>
+  
+  <!-- factories -->
+  <script type="text/javascript" src='factories/sessionFactory.js'></script>
+  <script type="text/javascript" src='factories/userFactory.js'></script>
+  <script type="text/javascript" src='factories/topicFactory.js'></script>
+  
+  <!-- controllers -->
+  <script type="text/javascript" src='controllers/loginController.js'></script>
+  <script type="text/javascript" src='controllers/dashboardController.js'></script>
+  <script type="text/javascript" src='controllers/topicController.js'></script>
+  <script type="text/javascript" src='controllers/userController.js'></script>
+  <script type="text/javascript" src='controllers/selectController.js'></script>
+  <script type="text/javascript" src='controllers/ticTacToeController.js'></script>
+
+  
+
+  
+</head>
+
+<body>
+  <div class="container">
+    <br><br><br>
+    <div ng-view>
+      <!-- partials go here -->
+    </div>
+  </div>
+</body>
+</html>
